@@ -1,0 +1,101 @@
+<div #scrollMe>
+  <div>
+    <div
+      class="mt-6"
+      style="
+        border-bottom: 15px solid white;
+        height: 300px; /* set a height so vertical centering works */
+        width: 100%;
+        background-color: var(--primary-color);
+        background-image: url('assets/images/headers/header.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center; /* horizontal center */
+        align-items: center; /* vertical center */
+        white-space: nowrap;
+        text-align: center;
+      "
+    >
+      <div class="col-md-8 col-12">
+        <span class="letter responsive-title"> J & J Moran Lawn Care </span>
+      </div>
+    </div>
+    <app-card
+      [bottomBorder]="true"
+      [scrollText]="'Services'"
+      [images]="fallspring"
+      type="Fall & Spring Cleanup"
+      [cardColor]="'blue-bg'"
+      routeTo="artists"
+      topBtnTxt="View Gallery"
+      [links]="links"
+      routingButtonTxt="View Gallery"
+    >
+    </app-card>
+    <app-card
+      [bottomBorder]="true"
+      [scrollText]="'Services'"
+      [images]="lawn"
+      type="Weekly Lawn Care"
+      [cardColor]="'green-bg'"
+      routeTo="artists"
+      topBtnTxt="View Gallery"
+      [links]="links"
+      routingButtonTxt="View Gallery"
+    >
+    </app-card>
+
+    <app-card
+      [bottomBorder]="true"
+      [scrollText]="'Services'"
+      [images]="mulch"
+      type="Muclhing"
+      [cardColor]="'brown-bg'"
+      routeTo="artists"
+      topBtnTxt="View Gallery"
+      [links]="links"
+      routingButtonTxt="View Gallery"
+    >
+    </app-card>
+    <app-card
+      [bottomBorder]="true"
+      [scrollText]="'Services'"
+      [images]="edge"
+      type="Trimming & Edging"
+      [cardColor]="'yellow-bg'"
+      routeTo="artists"
+      topBtnTxt="View Gallery"
+      [links]="links"
+      routingButtonTxt="View Gallery"
+    >
+    </app-card>
+    <!-- <div
+      #aboutSection
+      id="about"
+      class="d-flex flex-column text-center justify-content-center align-items-center about-me"
+      style="
+        border-bottom: 1px solid black;
+        border-top: 1px solid black;
+        background-color: var(--red);
+      "
+    >
+      <button class="highlight-btn mb-2">ABOUT</button>
+      <button class="highlight-dark-btn">CARLOS WALKER</button>
+    </div>
+
+    <app-card
+      [scrollText]="'AUTOMOTIVE PORTRAITS'"
+      [images]="images2"
+      type="concert gallery"
+      [sideBarColor]="'orange-bg'"
+      [cardColor]="'blue-bg'"
+      topBtnTxt="VIEW"
+      routeTo="artists"
+      sectionName="AUTOMOTIVE"
+      routingButtonTxt="VIEW CARS"
+    >
+    </app-card> -->
+  </div>
+</div>

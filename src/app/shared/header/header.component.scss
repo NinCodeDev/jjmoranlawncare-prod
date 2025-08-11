@@ -1,0 +1,123 @@
+.header {
+    background-color: var(--light-grey);
+    color: var(--light-color);
+    text-align: center; 
+    height:100px;   
+    display:flex;
+    padding:0;
+    align-items: center;
+    z-index: 1000;
+    position: fixed !important;
+    width:100%;
+    // border-radius:5px;
+    top: 0;
+}
+.header-wrapper {
+  position: relative;
+  z-index: 1000;
+}
+
+.header p {
+    font-weight: bold;
+}
+.header h1 {
+    font-weight: bold;
+}
+.drop-menu {
+  position: fixed;
+  top: 90px;
+  right: 0;
+  width: 100%;
+  background-color: var(--light-color);
+  color: white;
+  border: 1px solid black;
+  border-radius: 8px;
+  z-index: 500;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition:
+    max-height 0.4s ease,
+    opacity 0.4s ease,
+    transform 0.4s ease;
+
+  &.open {
+    max-height: 500px;
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+.menu-icon {
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+  cursor: pointer;
+
+  &.rotated {
+    transform: rotate(90deg);
+  }
+}
+
+.nav-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  // Optional hover styles
+  &:hover .menu-icon {
+    color: var(--neutral-color)
+  }
+}
+
+.ninai-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 2em;
+  width: 100%;
+  min-width: 120px;
+  margin: 8px;
+  gap: 8px;
+  border: none;
+  color: white;
+  background: transparent;
+  padding: 8px 16px;
+}
+
+.ninai-button .icon {
+  font-size: 20px;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.ninai-button .text {
+  font-size: 16px;
+  line-height: 1;
+}
+/* Hover effect */
+.ninai-button:hover {
+  background-color: black;
+  border-radius: 10px;
+}
+.ninai-button:disabled {
+  border-radius: 10px;
+  background: transparent;
+  color: var(--neutral-color);
+}
+
+/* Click (active) effect */
+.ninai-button:active {
+  background-color: var(--neutral-color);
+  transform: scale(0.98);
+  border-radius: 10px;
+}

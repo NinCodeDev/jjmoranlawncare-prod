@@ -1,0 +1,15 @@
+/* Apply flexbox to the entire app */
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 98vh; /* Ensure the container takes at least full viewport height */
+}
+
+main {
+  padding-top: 70px;
+  flex: 1; /* Allow the content to grow and take available space */
+  max-width: 1800px; /* limit width */
+  margin: 0 auto;    /* center horizontally */
+  padding: 0 1rem;   /* optional side padding for small screens */
+}
+

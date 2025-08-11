@@ -1,0 +1,8 @@
+  <div class="gallery-grid col-12"  style="padding:2em 5em">
+    <img *ngFor="let item of items; let i = index"
+         [gallery]="galleryId"
+         [lightbox]="i"
+         [src]="item.data!.thumb"
+         class="thumbnail-gal"
+         alt="Gallery image" />
+  </div>

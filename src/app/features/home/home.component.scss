@@ -1,0 +1,291 @@
+.line-left {
+  width: 75%;
+  background-color: #000; // solid black
+  margin: 1rem 0; // no auto, keeps it aligned left
+  opacity: 1;
+}
+
+.line-right {
+  width: 75%;
+  background-color: #000;
+  margin: 1rem 0 1rem auto; // top, right, bottom, left
+  opacity: 1;
+}
+
+.line-middle {
+  width: 75%;
+  background-color: #000; // solid black
+  margin: 1rem auto; // centers horizontally
+  opacity: 1;
+}
+
+.flicker-text {
+  color: white;
+  font-weight: bold;
+  font-family: var(--title-font);
+  animation: flicker 1.5s infinite alternate;
+}
+.letter {
+  display: inline-block;
+  font-size: 18vw;
+  margin-right: 0.5rem; /* Adjust as needed */
+  white-space: nowrap;
+}
+.letter {
+  display: inline-block;
+  font-size: 5vw;
+  margin-right: 0.5rem; /* Adjust as needed */
+  white-space: nowrap;
+}
+@keyframes flicker {
+  0%   { opacity: 1; }
+  10%  { opacity: 1; }
+  20%  { opacity: 1; }
+  30%  { opacity: 0.4; }
+  40%  { opacity: 0.1; }
+  50%  { opacity: 1; }
+  60%  { opacity: 1; }
+  70%  { opacity: 1; }
+  80%  { opacity: 0.1; }
+  90%  { opacity: 0.3; }
+  100% { opacity: 0.6; }
+}
+
+.responsive-title {
+  font-family: var(--title-font);
+  color: white;
+  font-size: 5vw; /* default for larger screens */
+}
+
+@media (max-width: 768px) {
+  .responsive-title {
+    font-size: 8vw; /* smaller font on small screens */
+  }
+}
+
+
+@media (max-width: 1268px) {
+  .responsive-title {
+    font-size: 8vw; /* smaller font on small screens */
+  }
+}
+/* Container must be relative for absolute children */
+.text-center {
+  position: relative;
+}
+
+
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+/* Base image */
+.base-img {
+  width: 80%;
+  height: auto;
+}
+
+/* Slide Up Text to Center */
+.slide-up-middle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 100%);
+  opacity: 0;
+  width: 60%;
+  height: auto;
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+.slide-up-middle.visible {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+/* Slide In Brand to Bottom-Left */
+.slide-in-bottom-left {
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  transform: translateX(-100%);
+  opacity: 0;
+  width: 40%;
+  height: auto;
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+  z-index: 10;
+  /* ← add this in case it's being hidden behind */
+}
+
+.about-me{
+  opacity: 1;
+    background-image: url('/assets/images/headers/about.svg');
+  background-size: cover;        /* scales image to cover entire area */
+  background-position: center;   /* centers the image */
+  background-repeat: no-repeat;  /* prevents tiling */
+  padding: 5em 0em;
+  width: 100%;
+}
+
+
+.image-title {
+  border: 4px solid var(--secondary-color);
+  margin-bottom: 1em;
+  padding: .3em;
+  border-radius: 25px;
+  color: var(--secondary-color);
+  font-size: 30px;
+  background: linear-gradient(to right, transparent 50%, white 50%) right;
+  background-size: 200%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition:
+    background-position 0.5s ease,
+    color 0.3s ease;
+  
+  &:hover{
+    background-position: left;
+    transform: scale(1.05);
+  }
+}
+
+
+.gal-text-container{
+  display: block;
+  position: relative;
+  bottom:40%;
+}
+.gal-text{ 
+  border: 4px solid var(--secondary-color);
+  margin-bottom: 1em;
+  padding: .3em;
+  border-radius: 25px;
+  color: var(--secondary-color);
+  font-size: 25px;
+  background: linear-gradient(to left, white 50%, var(--secondary-color) 50%) right;
+  background-size: 250%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition:
+    background-position 0.5s ease,
+    color 0.3s ease;
+  
+  &:hover{
+    background-position: left;
+    cursor: pointer;
+    color:white
+  }
+}
+ .custom-image {
+  border: 4px solid var(--secondary-color);
+}
+// galery images 
+/* gallery.component.scss */
+.grid-container {
+  display: grid;
+  width: 80% !important;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.grid-item {
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.thumbnail {
+  width: 100%;
+  height: auto;
+  border: 4px solid var(--secondary-color);
+  transition: transform 0.3s ease;
+}
+
+.grid-item:hover .thumbnail {
+  transform: scale(1.1);
+}
+
+
+.gal-bg {
+  padding: 2rem;
+  background-color: #f4f4f4;
+  background-image: url("/assets/images/sample.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 1200px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    /* make images bigger on large screens */
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  overflow: auto;
+}
+
+.modal-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("/assets/images/nail-polish.svg");
+  max-width: 90%;
+  max-height: 90%;
+  /* move padding here instead */
+  border-radius: 10px;
+  /* optional for cleaner look */
+}
+
+.modal-img {
+  width: 80%;
+  padding: 2em;
+  max-width: 90%;
+  max-height: 90vh;
+
+}
+
+.small-screen {
+  max-width: 60vw;
+  max-height: 60vh;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: 30px;
+  width: 30px;
+  color: white;
+  background: var(--border-color);
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+
+  &:hover {
+    background: red;
+  }
+
+  &:active {
+    transform: scale(1.25);
+  }
+}

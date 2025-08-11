@@ -1,0 +1,87 @@
+
+  .gal-text-container{
+    display: block;
+    position: relative;
+    bottom:40%;
+  }
+  .gal-text{ 
+    border: 4px solid  white;
+    margin-bottom: 1em;
+    padding: .3em;
+    border-radius: 25px;
+    color:  white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 25px;
+    background-color: var(--secondary-color);
+    
+    &:hover{
+      background-color: white;
+      cursor: pointer;
+      color:var(--secondary-color);
+      transform: scale(.95);
+    }
+  }::ng-deep .mat-tab-header-pagination {
+    display: none !important;
+  }
+  .gal-bg {
+  padding: 2rem;
+  background-color: #f4f4f4;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+}
+.image-title {
+    border: 4px solid var(--secondary-color);
+    margin-bottom: 1em;
+    padding: .3em;
+    border-radius: 25px;
+    color: var(--secondary-color);
+    font-size: 30px;
+    background: linear-gradient(to right, transparent 50%, white 50%) right;
+    background-size: 200%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition:
+      background-position 0.5s ease,
+      color 0.3s ease;
+    
+    &:hover{
+      background-position: left;
+      transform: scale(1.05);
+    }
+  }
+  .sec-bg{
+    background-image: url("/assets/images/services/service-sec-bg1.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .services-bg {
+    padding:1em;
+    gap: 1rem; 
+
+    display: flex;
+    justify-content: center;
+  }
+  
+.test123{
+    overflow-y: hidden;
+}
+.test234{
+    overflow-y: hidden;
+}
+.thumbnail {
+    transition: transform 0.3s ease;
+    cursor:pointer;
+    height: 100px; max-height: 500px; max-width: fit-content;border: 4px solid white; border-radius: 25px;
+  }
+  
+  .thumbnail:hover  {
+    transform: scale(1.1);
+  }
+  .swipe-wrapper {
+    touch-action: pan-y;
+    user-select: none;
+  }

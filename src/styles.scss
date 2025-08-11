@@ -1,1 +1,520 @@
-/* You can add global styles to this file, and also import other style files */
+// Custom Theming for Angular Material
+// For more information: https://material.angular.dev/guide/theming
+
+@use "./theme-colors" as colors;
+@use "sass:map";
+
+:root {
+  --brand-font: "Oswald", sans-serif;
+  --title-font: "Anton SC", sans-serif;
+  --roboto-font: "Roboto Flex", sans-serif;
+
+  --green: #3cb043;
+  --brown: #4b3621;
+  --red: #ec063d;
+  --orange: #cf2e2e;
+  --blue: #4da6ff;
+  --pink: #de6998;
+  --yellow: #ffd93d;
+  --light-grey: #2b2b2b;
+  --dark-grey: #191919;
+  --offwhite: #f4f4f4;
+  --primary-color: white;
+  --secondary-color: black;
+  --light-color: var(--light-grey);
+  --tertiary-color: var(--green);
+  --background-color: black;
+  --accent-color: var(--red);
+  --border-color: black;
+  --text-color: var(--light-grey);
+}
+
+html,
+body,
+*,
+*::before,
+*::after {
+  font-family: var(--brand-font);
+}
+
+body {
+  // background-color: var(--background-color);
+  // color: var(--text-color);
+  font-family: var(--brand-font);
+}
+
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+/* Padding */
+.pt-1 {
+  padding-top: 1rem;
+}
+
+.pt-2 {
+  padding-top: 2rem;
+}
+
+.pt-3 {
+  padding-top: 3rem;
+}
+
+.pb-1 {
+  padding-bottom: 1rem;
+}
+
+.pb-2 {
+  padding-bottom: 2rem;
+}
+
+.pb-3 {
+  padding-bottom: 3rem;
+}
+
+.pl-1 {
+  padding-left: 1rem;
+}
+
+.pl-2 {
+  padding-left: 2rem;
+}
+
+.pl-3 {
+  padding-left: 3rem;
+}
+
+.pr-1 {
+  padding-right: 1rem;
+}
+
+.pr-2 {
+  padding-right: 2rem;
+}
+
+.pr-3 {
+  padding-right: 3rem;
+}
+
+/* Margin */
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.mt-3 {
+  margin-top: 3rem;
+}
+
+.mt-6 {
+  margin-top: 6rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.mb-3 {
+  margin-bottom: 3rem;
+}
+
+.ml-1 {
+  margin-left: 1rem;
+}
+
+.ml-2 {
+  margin-left: 2rem;
+}
+
+.ml-3 {
+  margin-left: 3rem;
+}
+
+.mr-1 {
+  margin-right: 1rem;
+}
+
+.mr-2 {
+  margin-right: 2rem;
+}
+
+.mr-3 {
+  margin-right: 3rem;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+// /* Display Utilities */
+// .d-flex {
+//     display: flex !important;
+//   }
+//   .d-none {
+//     display: none !important;
+//   }
+
+//   @media (min-width: 768px) {
+//     .d-md-flex {
+//       display: flex !important;
+//     }
+//     .d-md-none {
+//       display: none !important;
+//     }
+//   }
+
+//   /* Flex Alignment */
+//   .align-items-start {
+//     align-items: flex-start !important;
+//   }
+//   .align-items-center {
+//     align-items: center !important;
+//   }
+//   .align-items-end {
+//     align-items: flex-end !important;
+//   }
+
+//   /* Justify Content */
+//   .justify-content-start {
+//     justify-content: flex-start !important;
+//   }
+//   .justify-content-center {
+//     justify-content: center !important;
+//   }
+//   .justify-content-end {
+//     justify-content: flex-end !important;
+//   }
+//   .justify-content-between {
+//     justify-content: space-between !important;
+//   }
+//   .justify-content-around {
+//     justify-content: space-around !important;
+//   }
+
+//   /* Gap Utilities */
+//   .gap-0 { gap: 0 !important; }
+//   .gap-1 { gap: 0.25rem !important; }
+//   .gap-2 { gap: 0.5rem !important; }
+//   .gap-3 { gap: 1rem !important; }
+//   .gap-4 { gap: 1.5rem !important; }
+//   .gap-5 { gap: 3rem !important; }
+
+//   /* Margin Utility (optional) */
+//   .m-0 { margin: 0 !important; }
+
+//images
+.vert-img {
+  height: 300px;
+  width: 300px;
+}
+
+.mat-mdc-menu-content {
+  display: flex;
+  flex-direction: column;
+  margin: 1;
+  padding: 0.5em 0.5em;
+  /* padding: 8px 0; */
+  border-radius: 12px !important;
+  /* or 16px, 24px for extra roundness */
+  overflow: hidden;
+  /* ensures inner content respects the radius */
+  background-color: white;
+  /* optional if needed */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  /* optional shadow */
+  /* border-radius: 10px; */
+  outline: 0;
+}
+
+.mat-mdc-menu-panel {
+  border-radius: 5px !important;
+  /* more roundness */
+  overflow: unset !important;
+  background: none;
+  box-shadow: none !important;
+}
+
+.h-btns {
+  position: relative;
+  display: inline-block;
+  color: var(--light-color);
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 5px;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--light-color);
+    border-radius: 5px;
+    box-sizing: border-box;
+
+    // Start with all borders hidden
+    clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+    transition: clip-path 0.3s ease;
+  }
+
+  &:hover::before {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    transition: clip-path 0.3s ease;
+  }
+
+  &:active {
+    color: var(--light-color);
+  }
+
+  &:active::before {
+    border-color: var(--light-color);
+  }
+}
+.h-line-btns {
+  // .h-btns {
+  position: relative;
+  background: none;
+  font-weight: bolder;
+  border: none;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 100%;
+    background-color: var(--green);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease, transform-origin 0s ease 0.3s;
+  }
+
+  &:hover::after {
+    transform-origin: left;
+    transition: transform 0.3s ease;
+    transform: scaleX(1);
+  }
+
+  &:not(:hover)::after {
+    transform-origin: right;
+    transition: transform 0.3s ease, transform-origin 0s;
+  }
+
+  &:active::after {
+    background: var(--green);
+  }
+
+  &:active {
+    color: var(--red);
+  }
+}
+.price-t {
+  background-color: white;
+  margin-top: 1em;
+  font-weight: bold;
+  border-bottom: 2px solid var(--secondary-color);
+  border-right: 2px solid var(--secondary-color);
+  padding: 0;
+}
+
+.mat-mdc-tab {
+  background-color: white !important;
+  border-bottom: 1px solid;
+}
+
+.mat-mdc-tab-label-container {
+  display: none !important;
+}
+
+.mat-mdc-tab-header {
+  display: none;
+  // overflow: hidden;
+  // position: relative;
+  // flex-shrink: 0;
+  // background: white;
+  // border: 2px solid black;
+  // border-radius: 25px;
+}
+
+.mat-mdc-tab-header-pagination,
+.mat-mdc-tab-header-pagination-before,
+.mat-mdc-tab-header-pagination-after {
+  display: none !important;
+  width: 0 !important;
+}
+
+.left-chev-btns {
+  position: relative;
+  background: none;
+  font-weight: bold;
+  border: none;
+  color: white;
+  cursor: pointer;
+  text-decoration: underline;
+  overflow: hidden;
+  border-radius: 5px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0; // anchor on the right
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover::after {
+    transform-origin: right;
+    transform: scaleX(1); // animate from right → left
+  }
+
+  &:not(:hover)::after {
+    transform-origin: left; // reverse: collapse toward left
+  }
+
+  &:active::after {
+    background: var(--tertiary-color);
+  }
+
+  &:active {
+    color: var(--tertiary-color);
+  }
+}
+
+.right-chev-btns {
+  // .h-btns {
+  position: relative;
+  background: none;
+  font-weight: bold;
+  border: none;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  overflow: hidden;
+  border-radius: 5px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease, transform-origin 0s ease 0.3s;
+  }
+
+  &:hover::after {
+    transform-origin: left;
+    transition: transform 0.3s ease;
+    transform: scaleX(1);
+  }
+
+  &:not(:hover)::after {
+    transform-origin: right;
+    transition: transform 0.3s ease, transform-origin 0s;
+  }
+
+  &:active::after {
+    background: var(--tertiary-color);
+  }
+
+  &:active {
+    color: var(--tertiary-color);
+  }
+}
+
+.simple-btn {
+  border: 2px solid black;
+  background: transparent;
+  color: black;
+  padding: 1rem 2rem;
+  margin: 0.5rem 0;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 180px;
+  transition: 0.3s;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    background: black;
+    color: white;
+  }
+}
+
+.highlight-btn {
+  border: none;
+  background: white;
+  color: var(--dark-grey);
+  padding: 0rem 2rem;
+  font-weight: bold;
+  width: fit-content;
+  cursor: pointer;
+  font-size: 3rem;
+  transition: 0.3s;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    background: var(--dark-grey);
+    color: white;
+  }
+}
+
+.highlight-dark-btn {
+  border: none;
+  background: var(--dark-grey);
+  color: white;
+  padding: 0rem 2rem;
+  font-weight: bold;
+  width: fit-content;
+  cursor: pointer;
+  font-size: 3rem;
+  transition: 0.3s;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    background: white;
+    color: var(--dark-grey);
+  }
+}

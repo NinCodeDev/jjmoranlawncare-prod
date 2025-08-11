@@ -1,0 +1,63 @@
+<div class="header-wrapper" (clickOutside)="closeMenu()">
+  <header class="header">
+    <div
+      class="col-10 col-sm-8 col-md-8 d-flex align-items-center justify-content-start bolder"
+      style="text-decoration: none !important"
+    >
+      <a
+        [routerLink]="['/']"
+        style="
+          background-color: black;
+          text-decoration: none !important;
+          border: 1rem solid var(--blue);
+          padding: 0 1rem;
+        "
+      >
+        <span
+          style="font-family: var(--title-font); font-size: 45px; color: white"
+          >J&J</span
+        >
+      </a>
+    </div>
+    <div class="col-2 col-sm-4 col-md-4 d-flex justify-content-end pr-2">
+      <!-- Nav Buttons (desktop only) -->
+      <nav class="d-none d-md-flex gap-2">
+        <button class="h-line-btns" (click)="goToHome(false)">HOME</button>
+        <button class="h-line-btns" (click)="goToGallery(false)">
+          GALLERY
+        </button>
+        <button class="h-line-btns" (click)="scrollToAboutSection(false)">
+          ABOUT
+        </button>
+      </nav>
+
+      <!-- Mobile Menu Toggle (mobile only) -->
+      <div class="d-md-none">
+        <button class="nav-button" (click)="toggleMenu()">
+          <span
+            class="material-symbols-outlined menu-icon"
+            [ngClass]="{ rotated: menuOpen }"
+            style="color: white"
+          >
+            {{ menuOpen ? "close" : "menu" }}
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="drop-menu" [class.open]="menuOpen">
+    <button (click)="goToHome()" class="ninai-button">
+      <span class="material-symbols-outlined icon">home</span>
+      <span class="text">HOME</span>
+    </button>
+    <button (click)="goToGallery()" class="ninai-button">
+      <span class="material-symbols-outlined icon">spa</span>
+      <span class="text">GALLERY</span>
+    </button>
+    <button class="ninai-button" (click)="scrollToAboutSection()">
+      <span class="material-symbols-outlined icon">diversity_3</span>
+      <span class="text">ABOUT</span>
+    </button>
+  </div>
+</div>

@@ -1,0 +1,274 @@
+
+
+@keyframes scroll-up {
+  0%   { transform: translateY(100%); }
+  100% { transform: translateY(-100%); }
+}
+.artist-page {
+  overflow: hidden !important;
+
+  display: flex;
+  width:100%;
+  min-height: 600px;
+  max-height: 70vh; /* 90% of viewport height */
+
+}
+/* Main content uses flex to align side-by-side */
+.content-wrapper {
+  display: flex;
+  max-height: 60vh;
+  min-height: 20vh;
+  width: 100%;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+}
+.orange-bg {
+  background-color: var(--orange)!important;
+}
+.red-bg {
+  background-color: var(--red)!important;
+}
+.blue-bg {
+  background-color: var(--blue)!important;
+}
+.green-bg {
+  background-color: var(--green) !important;
+}
+.brown-bg {
+  background-color: var(--brown) !important;
+}
+.yellow-bg {
+  background-color: var(--yellow) !important;
+}
+.offwhite-bg {
+  background-color: var(--offwhite) !important;
+}
+.light-grey-bg {
+  background-color: var(--light-grey) !important;
+}
+/* Only image + info become stacked on small screens */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+}
+/* Artist image */
+.artist-photo {
+  flex: 1;
+  height: 100%;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// @media (max-width: 768px) {
+//   .content-wrapper {
+//     flex-direction: column;
+//     align-items: stretch;
+//   }
+
+//   .main-content {
+//     flex-direction: column;
+//     width: 100%;
+//   }
+
+//   .artist-photo-wrapper {
+//     width: 100%;
+//     display: flex;
+//   }
+
+//   .artist-photo {
+//     width: 100%;
+//     aspect-ratio: 1.5; /* Keeps it balanced */
+//   }
+
+//   .artist-photo img {
+//     width: 100%;
+//     height: auto;
+//     object-fit: cover;
+//     display: block;
+//   }
+
+//   .artist-info {
+//     width: 100%;
+//     padding: 2em;
+//   }
+// }
+
+.text-content {
+  font-size: 3em;
+  width:700px;
+  height:fit-content;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 600px;
+  width: 70px;
+  background: var(--yellow);
+  color: black;
+  font-weight: bold;
+}
+
+@media (min-width: 769px) {
+  .sidebar {
+    min-height: 300px;
+  }
+  .artist-page  {
+    min-height: 300px;
+  }
+}
+
+.vertical-scroll-text {
+  writing-mode: vertical-rl;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.scroll-track {
+  display: flex;
+  justify-content: center;
+  width:70px;
+  white-space: nowrap;
+  animation: scroll-up 7s linear infinite;
+}
+
+@keyframes scroll-up {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-25%);
+  }
+}
+
+.artist-photo-wrapper {
+  position: relative;
+  flex: 1;
+  min-height: 300px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.artist-photo {
+  position: relative;
+  width: 100%;
+  height: 100%;  object-fit: cover; /* make it fill without distortion */
+
+  overflow: hidden;
+
+
+
+  &.slide-left img {
+    animation: slideLeft 0.5s ease;
+  }
+
+  &.slide-right img {
+    animation: slideRight 0.5s ease;
+  }
+}
+.artist-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+/* Overlay on hover */
+.hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--red); /* Background color on hover */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  cursor: pointer;
+  font-size: 2rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+/* Hover effect */
+.artist-photo:hover img {
+  opacity: 0;
+}
+
+.artist-photo:hover .hover-overlay {
+  opacity: 1;
+}
+.artist-info {
+  flex: 1;
+  background-color: var(--red);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px !important;
+  color: black;
+  padding: 2rem;
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+
+  .nav-controls {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .nav-btn {
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid black;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+
+    &:hover {
+      background: black;
+      color:white;
+    }
+  }
+}

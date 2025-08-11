@@ -1,0 +1,48 @@
+  /* Slide Up Text to Center */
+  .slide-up-middle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 100%);
+    opacity: 0;
+    width: 60%;
+    height: auto;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+  }
+  
+  .slide-up-middle.visible {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+   
+  /* Slide In Brand to Bottom-Left */
+  .slide-in-bottom-left {
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    transform: translateX(-100%);
+    opacity: 0;
+    width: 40%;
+    height: auto;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+    z-index: 10; /* ← add this in case it's being hidden behind */
+  }
+  
+
+  .slide-in-bottom-left.visible {
+    transform: translateX(10%);
+    opacity: 1;
+  }
+  .service-item {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+  
+  .service-item span:first-child {
+    flex-grow: 1;
+  }
+  .service-price {
+    width: 50px; /* Or adjust based on your design */
+    text-align: left; /* Aligns the price to the left inside this block */
+  }
