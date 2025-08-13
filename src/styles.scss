@@ -118,6 +118,9 @@ main {
 .mt-6 {
   margin-top: 6rem;
 }
+.mt-8 {
+  margin-top: 8rem;
+}
 
 .mb-1 {
   margin-bottom: 1rem;
@@ -333,7 +336,7 @@ body {
   }
 
   &:active {
-    color: var(--red);
+    color: var(--green);
   }
 }
 .price-t {
@@ -517,4 +520,13 @@ body {
     background: white;
     color: var(--dark-grey);
   }
+}
+
+.responsive-title {
+  font-family: var(--title-font);
+  color: white;
+  font-size: clamp(1.5rem, 2rem, 4rem); /* min, preferred, max */
+  line-height: 1.1;
+  text-align: center;
+  word-break: break-word;
 }

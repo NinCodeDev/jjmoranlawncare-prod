@@ -50,7 +50,7 @@
   background-color: var(--light-grey) !important;
 }
 /* Only image + info become stacked on small screens */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .main-content {
     flex-direction: column;
   }

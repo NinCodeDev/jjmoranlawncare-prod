@@ -8,20 +8,7 @@
       : {}
   "
 >
-  <div class="content-wrapper">
-    <!-- Sidebar (stays fixed left) -->
-    <!-- <div class="sidebar" [ngClass]="sideBarColor">
-      <div class="vertical-scroll-text">
-        <div class="scroll-track">
-          <span class="text-content mb-5">{{ scrollText }}</span>
-          <span class="text-content mb-5">{{ scrollText }}</span>
-          <span class="text-content mb-5">{{ scrollText }}</span>
-          <span class="text-content mb-5">{{ scrollText }}</span>
-        </div>
-      </div>
-    </div> -->
-
-    <!-- Wrap image + info -->
+  <div *ngIf="!reversed" class="content-wrapper">
     <div class="main-content">
       <div class="artist-photo-wrapper">
         <div class="artist-photo" [ngClass]="slideDirection">
@@ -33,9 +20,51 @@
           </a>
         </div>
       </div>
-
       <div class="artist-info" [ngClass]="cardColor">
-        <h1>{{ type }}</h1>
+        <h1>{{ cardDisplayText }}</h1>
+        <button
+          *ngIf="topBtnTxt !== ''"
+          class="simple-btn"
+          (click)="onClickCard()"
+        >
+          {{ topBtnTxt }}
+        </button>
+        <button
+          *ngIf="botBtnTxt !== ''"
+          class="simple-btn"
+          (click)="openInNewTab()"
+        >
+          {{ botBtnTxt }}
+        </button>
+        <div class="nav-controls">
+          <button class="nav-btn" (click)="nextArtist()">
+            <span
+              class="material-symbols-outlined"
+              style="transform: rotate(180deg)"
+              >play_arrow</span
+            >
+          </button>
+          <button class="nav-btn" (click)="nextArtist()">
+            <span class="material-symbols-outlined">play_arrow</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="reversed" class="content-wrapper">
+    <div class="main-content">
+      <div class="artist-photo-wrapper">
+        <div class="artist-photo" [ngClass]="slideDirection">
+          <a (click)="onClickCard()">
+            <img *ngIf="image" [src]="image" [alt]="scrollText" />
+            <div class="hover-overlay" [ngClass]="cardColor">
+              <span>{{ routingButtonTxt }}</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="artist-info" [ngClass]="cardColor">
+        <h1>{{ cardDisplayText }}</h1>
         <button
           *ngIf="topBtnTxt !== ''"
           class="simple-btn"

@@ -51,11 +51,7 @@
   100% { opacity: 0.6; }
 }
 
-.responsive-title {
-  font-family: var(--title-font);
-  color: white;
-  font-size: 5vw; /* default for larger screens */
-}
+
 
 @media (max-width: 768px) {
   .responsive-title {

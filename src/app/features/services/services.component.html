@@ -1,179 +1,298 @@
 <div #scrollMe>
-  
-    <div class="text-center position-relative" style="border-bottom: 1px solid black;">
-      <img src="assets/images/headers/services-bg.svg" 
-      alt="manicure"
-      width="800"
-      height="400"
-      style="width: 100%; height: auto;" />
+  <div
+    class="mt-6"
+    style="
+      border-bottom: 15px solid white;
+      height: 300px; /* set a height so vertical centering works */
+      background-color: var(--primary-color);
+      background-image: url('assets/images/headers/header.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center; /* horizontal center */
+      align-items: center; /* vertical center */
+      white-space: nowrap;
+      text-align: center;
+    "
+  >
+    <div class="col-md-8 col-12">
+      <span class="responsive-title"> J & J Moran Lawn Care </span>
     </div>
-  
-    <div class="d-flex text-center justify-content-center align-items-center"
-      style=" border-bottom: 1px solid black; background-color: rgb(241, 213, 217); padding: 1.5em;">
-      <h1
-        style="border-top: 1px solid black; border-bottom: 1px solid black;width: 50%; padding: .01em; border-radius: 5px; font-family: var(--brand-font), cursive !important; font-weight: 700; font-size: 50px;">
-        Nails
-      </h1>
-    </div>
-  
-    <div class="container">
-      <div class="row d-flex justify-content-center bg-white p-4">
-        <div class="col-12 col-md-4 mb-4"
-          style="background-color: var(--background-color); border-left: 2px solid var(--secondary-color); border-right: 2px solid var(--secondary-color);">
-  
-          <p class="price-t">Gel Manicure</p>
-          Long-lasting gel polish with LED curing and high shine finish.
-          <div style="display: flex; justify-content: space-between;"><span>Starting at</span><span>$35</span></div>
-          <p class="price-t">Deluxe Manicure</p>
-          A pampering experience that includes a warm soak, nail shaping, cuticle care, polish, and a sugar scrub massage to soften and refresh hands.
-          <div style="display: flex; justify-content: space-between;"><span>Starting at</span><span>$30</span></div>
-          
-          <p class="price-t">Classic Manicure</p>
-          Classic care with a warm soak, nail trim or file, cuticle care, hand massage, and polish of your choice.
-          <div style="display: flex; justify-content: space-between;"><span>Starting at</span><span>$18</span></div>
+  </div>
+
+  <div class="container">
+    <div class="row d-flex justify-content-center bg-white p-4">
+      <div
+        class="col-12 col-md-4 mb-4"
+        style="
+          background-color: var(--background-color);
+          border-left: 2px solid var(--secondary-color);
+          border-right: 2px solid var(--secondary-color);
+        "
+      >
+        <p class="price-t">Gel Manicure</p>
+        Long-lasting gel polish with LED curing and high shine finish.
+        <div style="display: flex; justify-content: space-between">
+          <span>Starting at</span><span>$35</span>
         </div>
-  
-        <div class="col-12 col-md-4 mb-4 bg-white">
-          <p class="price-t">Dip Powder</p>
-          Long-lasting gel polish with LED curing and high shine finish.
-          <div style="display: flex; justify-content: space-between;"><span>Starting at</span><span>$55</span></div>
-  
-          <p class="price-t">Gel Powder</p>
-          A lightweight, long-lasting nail enhancement that doesn’t require UV light. Stronger than gel and more natural-looking than acrylic—perfect for everyday wear.
-          <div style="display: flex; justify-content: space-between;"><span>Starting at</span><span>$45</span></div>
-  
-          <p class="price-t">Acrylic Full set</p>
-          Classic and durable, acrylic nails add length and strength with a customizable shape. Finished with your choice of polish or gel for a clean, lasting look.
-          <div style="display: flex; justify-content: space-between;"><span>Starting at</span><span>$65</span></div>
+        <p class="price-t">Deluxe Manicure</p>
+        A pampering experience that includes a warm soak, nail shaping, cuticle
+        care, polish, and a sugar scrub massage to soften and refresh hands.
+        <div style="display: flex; justify-content: space-between">
+          <span>Starting at</span><span>$30</span>
         </div>
-  
-        <div class="col-12 col-md-4 mb-4"
-          style="background-color: var(--background-color); border-left: 2px solid var(--secondary-color); border-right: 2px solid var(--secondary-color);">
-          <p class="price-t">Add-Ons</p>
-          <div class="service-item">
-            <span class="service-name">Gel Polish</span>
-            <span class="service-price">$20</span>
-          </div>
-          <div class="service-item">
-            <span class="service-name">Cut Down</span>
-            <span class="service-price">$3</span>
-          </div>
-          <div class="service-item">
-            <span class="service-name">Repair</span>
-            <span class="service-price">$5</span>
-          </div>
-          <div class="service-item">
-            <span class="service-name">Nail Art</span>
-            <span class="service-price">$5+</span>
-          </div>
-          <div class="service-item">
-            <span class="service-name">Fill Acrylic</span>
-            <span class="service-price">$45+</span>
-          </div>
+
+        <p class="price-t">Classic Manicure</p>
+        Classic care with a warm soak, nail trim or file, cuticle care, hand
+        massage, and polish of your choice.
+        <div style="display: flex; justify-content: space-between">
+          <span>Starting at</span><span>$18</span>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4 mb-4 bg-white">
+        <p class="price-t">Dip Powder</p>
+        Long-lasting gel polish with LED curing and high shine finish.
+        <div style="display: flex; justify-content: space-between">
+          <span>Starting at</span><span>$55</span>
+        </div>
+
+        <p class="price-t">Gel Powder</p>
+        A lightweight, long-lasting nail enhancement that doesn’t require UV
+        light. Stronger than gel and more natural-looking than acrylic—perfect
+        for everyday wear.
+        <div style="display: flex; justify-content: space-between">
+          <span>Starting at</span><span>$45</span>
+        </div>
+
+        <p class="price-t">Acrylic Full set</p>
+        Classic and durable, acrylic nails add length and strength with a
+        customizable shape. Finished with your choice of polish or gel for a
+        clean, lasting look.
+        <div style="display: flex; justify-content: space-between">
+          <span>Starting at</span><span>$65</span>
+        </div>
+      </div>
+
+      <div
+        class="col-12 col-md-4 mb-4"
+        style="
+          background-color: var(--background-color);
+          border-left: 2px solid var(--secondary-color);
+          border-right: 2px solid var(--secondary-color);
+        "
+      >
+        <p class="price-t">Add-Ons</p>
+        <div class="service-item">
+          <span class="service-name">Gel Polish</span>
+          <span class="service-price">$20</span>
+        </div>
+        <div class="service-item">
+          <span class="service-name">Cut Down</span>
+          <span class="service-price">$3</span>
+        </div>
+        <div class="service-item">
+          <span class="service-name">Repair</span>
+          <span class="service-price">$5</span>
+        </div>
+        <div class="service-item">
+          <span class="service-name">Nail Art</span>
+          <span class="service-price">$5+</span>
+        </div>
+        <div class="service-item">
+          <span class="service-name">Fill Acrylic</span>
+          <span class="service-price">$45+</span>
         </div>
       </div>
     </div>
-  
-    <div class="d-flex text-center justify-content-center align-items-center"
-      style="border-top: 1px solid black; border-bottom: 1px solid black; background-color: rgb(241, 213, 217); padding: 1.5em;">
-      <h1
-        style="border-top: 1px solid black; border-bottom: 1px solid black;width: 50%; padding: .01em; border-radius: 5px; font-family: var(--brand-font), cursive !important; font-weight: 700; font-size: 50px;">
-        Pedicures
-      </h1>
-    </div>
-  
-    <div class="container my-4">
-      <div class="row justify-content-center"
-      style=" border: 2px solid var(--secondary-color);">
-        <div class="col-12">
-          <div class="d-flex justify-content-center align-items-center text-center p-3">
-            All pedicures include nail shaping, cuticle care, exfoliation, massage, hydrating lotion, and a warm towel wrap for a blissful finish.
-          </div>
+  </div>
+
+  <div
+    class="d-flex text-center justify-content-center align-items-center"
+    style="
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+      background-color: rgb(241, 213, 217);
+      padding: 1.5em;
+    "
+  >
+    <h1
+      style="
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        width: 50%;
+        padding: 0.01em;
+        border-radius: 5px;
+        font-family: var(--brand-font), cursive !important;
+        font-weight: 700;
+        font-size: 50px;
+      "
+    >
+      Pedicures
+    </h1>
+  </div>
+
+  <div class="container my-4">
+    <div
+      class="row justify-content-center"
+      style="border: 2px solid var(--secondary-color)"
+    >
+      <div class="col-12">
+        <div
+          class="d-flex justify-content-center align-items-center text-center p-3"
+        >
+          All pedicures include nail shaping, cuticle care, exfoliation,
+          massage, hydrating lotion, and a warm towel wrap for a blissful
+          finish.
         </div>
       </div>
-  
-      <div class="row d-flex justify-content-center bg-white p-4 border-bottom" style="border-bottom: 2px solid var(--secondary-color);">
-        <div class="col-12 col-md-4 mb-4"
-          style="background-color: var(--background-color); border-left: 2px solid var(--secondary-color); border-right: 2px solid var(--secondary-color);">
-          <p class="price-t">Deluxe Jelly Pedicure</p>
-          The ultimate indulgence—combining every luxurious element: callus care, dual scrubs, jelly soak, massage, mask, and polish.
-          <div style="display: flex; justify-content: space-between;"><span>Starting at</span><span>$60</span></div>
-  
-          <p class="price-t">Callus Treatment Pedicure</p>
-          Target tough skin with a focused callus treatment, smoothing pumice, and a scrub of your choice.
-          <div style="display: flex; justify-content: space-between;"><span>Starting at</span><span>$40</span></div>
-  
-          <p class="price-t">Jelly Pedicure</p>
-          Indulge in a sensory soak with natural oils. Exfoliate, massage, and melt into relaxation.
-          <div style="display: flex; justify-content: space-between;"><span>Starting at</span><span>$45</span></div>
+    </div>
+
+    <div
+      class="row d-flex justify-content-center bg-white p-4 border-bottom"
+      style="border-bottom: 2px solid var(--secondary-color)"
+    >
+      <div
+        class="col-12 col-md-4 mb-4"
+        style="
+          background-color: var(--background-color);
+          border-left: 2px solid var(--secondary-color);
+          border-right: 2px solid var(--secondary-color);
+        "
+      >
+        <p class="price-t">Deluxe Jelly Pedicure</p>
+        The ultimate indulgence—combining every luxurious element: callus care,
+        dual scrubs, jelly soak, massage, mask, and polish.
+        <div style="display: flex; justify-content: space-between">
+          <span>Starting at</span><span>$60</span>
         </div>
-  
-        <div class="col-12 col-md-4 mb-4 bg-white">
-          <p class="price-t">Deluxe Spa Pedicure</p>
-          A full spa journey including callus care, dual scrubs, mask, and hot towel.
-          <div style="display: flex; justify-content: space-between;"><span>Starting at</span><span>$50</span></div>
-  
-          <p class="price-t">Sugar Scrub Pedicure</p>
-          Sweet exfoliation + relaxing massage.
-          <div style="display: flex; justify-content: space-between;"><span>Starting at</span><span>$35</span></div>
-  
-          <p class="price-t">Eucalyptus Pedicure</p>
-          Revitalizing scrub with eucalyptus essence.
-          <div style="display: flex; justify-content: space-between;"><span>Starting at</span><span>$30</span></div>
+
+        <p class="price-t">Callus Treatment Pedicure</p>
+        Target tough skin with a focused callus treatment, smoothing pumice, and
+        a scrub of your choice.
+        <div style="display: flex; justify-content: space-between">
+          <span>Starting at</span><span>$40</span>
         </div>
-  
-        <div class="col-12 col-md-4 mb-4"
-          style="background-color: var(--background-color); border-left: 2px solid var(--secondary-color); border-right: 2px solid var(--secondary-color);">
-          <p class="price-t">Add-Ons</p>
-          <div class="service-item">
-            <span class="service-name">Gel Polish</span>
-            <span class="service-price">$20</span>
-          </div>
-          <div class="service-item">
-            <span class="service-name">Cut Down</span>
-            <span class="service-price">$3</span>
-          </div>
-          <div class="service-item">
-            <span class="service-name">Repair</span>
-            <span class="service-price">$5</span>
-          </div>
-          <div class="service-item">
-            <span class="service-name">Nail Art</span>
-            <span class="service-price">$5+</span>
-          </div>
-          <div class="service-item">
-            <span class="service-name">Full Set Acrylic</span>
-            <span class="service-price">$65+</span>
-          </div>
-          <div class="service-item">
-            <span class="service-name">Fill Acrylic</span>
-            <span class="service-price">$45+</span>
-          </div>
-          
+
+        <p class="price-t">Jelly Pedicure</p>
+        Indulge in a sensory soak with natural oils. Exfoliate, massage, and
+        melt into relaxation.
+        <div style="display: flex; justify-content: space-between">
+          <span>Starting at</span><span>$45</span>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4 mb-4 bg-white">
+        <p class="price-t">Deluxe Spa Pedicure</p>
+        A full spa journey including callus care, dual scrubs, mask, and hot
+        towel.
+        <div style="display: flex; justify-content: space-between">
+          <span>Starting at</span><span>$50</span>
+        </div>
+
+        <p class="price-t">Sugar Scrub Pedicure</p>
+        Sweet exfoliation + relaxing massage.
+        <div style="display: flex; justify-content: space-between">
+          <span>Starting at</span><span>$35</span>
+        </div>
+
+        <p class="price-t">Eucalyptus Pedicure</p>
+        Revitalizing scrub with eucalyptus essence.
+        <div style="display: flex; justify-content: space-between">
+          <span>Starting at</span><span>$30</span>
+        </div>
+      </div>
+
+      <div
+        class="col-12 col-md-4 mb-4"
+        style="
+          background-color: var(--background-color);
+          border-left: 2px solid var(--secondary-color);
+          border-right: 2px solid var(--secondary-color);
+        "
+      >
+        <p class="price-t">Add-Ons</p>
+        <div class="service-item">
+          <span class="service-name">Gel Polish</span>
+          <span class="service-price">$20</span>
+        </div>
+        <div class="service-item">
+          <span class="service-name">Cut Down</span>
+          <span class="service-price">$3</span>
+        </div>
+        <div class="service-item">
+          <span class="service-name">Repair</span>
+          <span class="service-price">$5</span>
+        </div>
+        <div class="service-item">
+          <span class="service-name">Nail Art</span>
+          <span class="service-price">$5+</span>
+        </div>
+        <div class="service-item">
+          <span class="service-name">Full Set Acrylic</span>
+          <span class="service-price">$65+</span>
+        </div>
+        <div class="service-item">
+          <span class="service-name">Fill Acrylic</span>
+          <span class="service-price">$45+</span>
+        </div>
       </div>
     </div>
-    
-    <div class="d-flex text-center justify-content-center align-items-center"
-      style=" border-bottom: 1px solid black; background-color: rgb(241, 213, 217); padding: 1.5em;">
+
+    <div
+      class="d-flex text-center justify-content-center align-items-center"
+      style="
+        border-bottom: 1px solid black;
+        background-color: rgb(241, 213, 217);
+        padding: 1.5em;
+      "
+    >
       <h1
-        style="border-top: 1px solid black; border-bottom: 1px solid black;width: 50%; padding: .01em; border-radius: 5px; font-family: var(--brand-font), cursive !important; font-weight: 700; font-size: 50px;">
+        style="
+          border-top: 1px solid black;
+          border-bottom: 1px solid black;
+          width: 50%;
+          padding: 0.01em;
+          border-radius: 5px;
+          font-family: var(--brand-font), cursive !important;
+          font-weight: 700;
+          font-size: 50px;
+        "
+      >
         Waxing
       </h1>
     </div>
-  
+
     <div class="container">
       <div class="row d-flex justify-content-center bg-white p-4">
-        <div class="col-12 col-md-4 mb-4"
-          style="background-color: var(--background-color); border-left: 2px solid var(--secondary-color); border-right: 2px solid var(--secondary-color);">
-  
+        <div
+          class="col-12 col-md-4 mb-4"
+          style="
+            background-color: var(--background-color);
+            border-left: 2px solid var(--secondary-color);
+            border-right: 2px solid var(--secondary-color);
+          "
+        >
           <p class="price-t">Facial Waxing</p>
-          <div class="service-item"><span class="service-name">Eyebrows</span><span class="service-price">$9</span></div>
-          <div class="service-item"><span class="service-name">Lip</span><span class="service-price">$7</span></div>
-          <div class="service-item"><span class="service-name">Chin</span><span class="service-price">$10+</span></div>
-          <div class="service-item"><span class="service-name">Underarm</span><span class="service-price">$20</span></div>
-          
+          <div class="service-item">
+            <span class="service-name">Eyebrows</span
+            ><span class="service-price">$9</span>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Lip</span
+            ><span class="service-price">$7</span>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Chin</span
+            ><span class="service-price">$10+</span>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Underarm</span
+            ><span class="service-price">$20</span>
+          </div>
         </div>
-  
+
         <div class="col-12 col-md-4 mb-4 bg-white">
           <p class="price-t">Body Waxing</p>
           <div class="service-item">
@@ -193,9 +312,15 @@
             <span class="service-price">$60+</span>
           </div>
         </div>
-  
-        <div class="col-12 col-md-4 mb-4"
-          style="background-color: var(--background-color); border-left: 2px solid var(--secondary-color); border-right: 2px solid var(--secondary-color);">
+
+        <div
+          class="col-12 col-md-4 mb-4"
+          style="
+            background-color: var(--background-color);
+            border-left: 2px solid var(--secondary-color);
+            border-right: 2px solid var(--secondary-color);
+          "
+        >
           <p class="price-t">Bikini & Brazilian Waxing</p>
           <div class="service-item">
             <span class="service-name">Brazilian</span>
@@ -209,4 +334,4 @@
       </div>
     </div>
   </div>
-  
+</div>

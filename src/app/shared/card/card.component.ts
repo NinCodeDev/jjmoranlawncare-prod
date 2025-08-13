@@ -16,6 +16,8 @@ import { Router } from '@angular/router';
 })
 export class CardComponent implements OnInit, OnChanges {
   @Input() bottomBorder = false;
+  @Input() reversed = false;
+  @Input() cardDisplayText = '';
   @Input() scrollText = '';
   @Input() routeTo = '';
   @Input() sectionName = '';

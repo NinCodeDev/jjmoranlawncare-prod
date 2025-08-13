@@ -10,14 +10,9 @@ import {
   ViewChild,
 } from '@angular/core';
 import { MatTabsModule } from '@angular/material/tabs';
-import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormsModule } from '@angular/forms';
 
-import {
-  AsyncPipe,
-  CommonModule,
-  isPlatformBrowser,
-  NgFor,
-} from '@angular/common';
+import { CommonModule, isPlatformBrowser, NgFor } from '@angular/common';
 import { Gallery, GalleryItem, ImageItem } from 'ng-gallery';
 import { Lightbox, LightboxModule } from 'ng-gallery/lightbox';
 import { GalleryModule } from 'ng-gallery';
@@ -86,32 +81,26 @@ export class HomeComponent
   ];
 
   fallspring = {
-    Cleanup: 'assets/images/gallery/edge4.png',
-    image2: 'assets/images/gallery/edge1.jpg',
-    image3: 'assets/images/gallery/edge2.jpg',
-    image4: 'assets/images/gallery/edge3.jpg',
-    image5: 'assets/images/gallery/edge5.jpg',
+    Cleanup: 'assets/images/gallery/cleanup2.jpg',
+    image2: 'assets/images/gallery/cleanup3.jpg',
+    image3: 'assets/images/gallery/cleanup1.jpg',
   };
   lawn = {
-    Lawn: 'assets/images/gallery/gallery2.jpg',
-    image2: 'assets/images/gallery/gallery1.jpg',
-    image3: 'assets/images/gallery/gallery3.jpg',
-    image4: 'assets/images/gallery/gallery4.jpg',
-    image5: 'assets/images/gallery/gallery5.jpg',
+    Lawn: 'assets/images/gallery/lawn3.jpg',
+    image2: 'assets/images/gallery/lawn1.jpg',
+    image3: 'assets/images/gallery/lawn2.jpg',
+    image4: 'assets/images/gallery/lawn4.jpg',
   };
   mulch = {
-    Mulching: 'assets/images/gallery/mulch.svg',
-    image2: 'assets/images/gallery/edge1.jpg',
-    image3: 'assets/images/gallery/edge2.jpg',
+    Mulching: 'assets/images/gallery/mulch2.jpg',
+    image2: 'assets/images/gallery/mulch3.jpg',
     image4: 'assets/images/gallery/edge3.jpg',
-    image5: 'assets/images/gallery/edge5.jpg',
   };
 
   edge = {
-    Trimming: 'assets/images/gallery/edge4.png',
+    Trimming: 'assets/images/gallery/trimming1.jpg',
     image2: 'assets/images/gallery/edge1.jpg',
     image3: 'assets/images/gallery/edge2.jpg',
-    image4: 'assets/images/gallery/edge3.jpg',
     image5: 'assets/images/gallery/edge5.jpg',
   };
   links = [
