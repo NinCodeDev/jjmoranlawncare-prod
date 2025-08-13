@@ -20,6 +20,7 @@ export class CardComponent implements OnInit, OnChanges {
   @Input() cardDisplayText = '';
   @Input() scrollText = '';
   @Input() routeTo = '';
+  @Input() topBtnRoute = '';
   @Input() sectionName = '';
   @Input() images: { [key: string]: string } = {};
   @Input() type = '';
@@ -46,6 +47,22 @@ export class CardComponent implements OnInit, OnChanges {
   onClickCard() {
     this.router
       .navigate([`/${this.routeTo}`], {
+        fragment: `${Object.keys(this.images)[0]}`,
+      })
+      .then(() => {
+        // Wait for DOM to settle, then scroll manually
+        setTimeout(() => {
+          const el = document.getElementById(this.currentArtist);
+          if (el) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }, 100); // adjust if needed
+      });
+  }
+
+  onClickTopBtn() {
+    this.router
+      .navigate([`/${this.topBtnRoute}`], {
         fragment: `${Object.keys(this.images)[0]}`,
       })
       .then(() => {

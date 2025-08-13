@@ -2,15 +2,17 @@
   display: flex;
   gap: 1rem;
   overflow-x: hidden;
-  padding: 1rem;
   align-items: flex-start;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .thumbnail-gal {
-  width: auto;
+  max-width: 100%;
+  height: auto;
   object-fit: cover;
-  flex-shrink: 0; /* prevents flex from squashing them */
+  flex-shrink: 0;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
 
@@ -19,24 +21,11 @@
   }
 }
 
-
 /* Responsive tweaks */
-@media (max-width: 800px) {
+@media (max-width: 300px) {
   .thumbnail-gal {
     max-height: 350px !important;
     max-width: 70vw;
-  }
-}
-
-@media (max-width: 300px) {
-  .thumbnail-gal{
-    max-height: 250px !important;
-  }
-}
-
-@media (min-width: 800px) {
-  .thumbnail-gal{
-    max-height: 500px !important;
   }
 }
 

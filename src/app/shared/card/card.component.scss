@@ -9,15 +9,15 @@
 
   display: flex;
   width:100%;
-  min-height: 600px;
-  max-height: 70vh; /* 90% of viewport height */
+  min-height: 150px;
+  max-height: 150px;
 
 }
 /* Main content uses flex to align side-by-side */
 .content-wrapper {
   display: flex;
-  max-height: 60vh;
-  min-height: 20vh;
+  max-height: 150px;
+  min-height: 150px;
   width: 100%;
 }
 
@@ -50,11 +50,36 @@
   background-color: var(--light-grey) !important;
 }
 /* Only image + info become stacked on small screens */
-@media (max-width: 900px) {
-  .main-content {
-    flex-direction: column;
+@media (max-width: 768px) {
+  .main-content,
+  .artist-page,
+  .content-wrapper,
+  .artist-photo-wrapper,
+  .artist-info {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
+  .main-content,
+  .artist-page,
+  .content-wrapper {
+    min-height: 0 !important;
+    max-height: none !important;
+    height: auto !important;
+    flex-direction: column;
+    width: 100%;
+  }
+  .artist-photo-wrapper,
+  .artist-info {
+    min-height: 0 !important;
+    max-height: none !important;
+    height: auto !important;
+    width: 100%;
+  }
+
+  
 }
+
+
 /* Artist image */
 .artist-photo {
   flex: 1;

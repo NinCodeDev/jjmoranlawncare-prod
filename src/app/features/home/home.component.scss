@@ -52,19 +52,6 @@
 }
 
 
-
-@media (max-width: 768px) {
-  .responsive-title {
-    font-size: 8vw; /* smaller font on small screens */
-  }
-}
-
-
-@media (max-width: 1268px) {
-  .responsive-title {
-    font-size: 8vw; /* smaller font on small screens */
-  }
-}
 /* Container must be relative for absolute children */
 .text-center {
   position: relative;
